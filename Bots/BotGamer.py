@@ -18,7 +18,10 @@ class BotGamer(Bot):
         print("Bot Gamer: Olá jogadô, Eu sou seu novo parceiro de equipe!")
  
     def mostra_comandos(self):
-        pass
+        print("[0]: Como está o dia hoje?")
+        print("[1]: Quem é seu criador?")
+        print("[2]: Qual seu jogo favorito?")
+        print("[3]: Qual seu rank no seu jogo favorito?")
     
     def executa_comando(self,cmd):
         pass
