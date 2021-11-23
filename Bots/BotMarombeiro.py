@@ -24,7 +24,10 @@ class BotMarombeiro(Bot):
         return self.__comandos
     
     def executa_comando(self,cmd):
-        return self.__comandos[cmd]
+        try:
+            return self.__comandos[cmd]
+        except:
+            print("Ah isso eu não sei...")
 
     def boas_vindas(self):
         return "HORA DO SHOW P****!"
