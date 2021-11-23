@@ -30,16 +30,22 @@ class BotGamer():
         self.__comandos = novo_comandos
 
     def apresentacao(self):
-        print(f"{self.__nome}: Eu sou o {self.__nome}! O bot mais insano desse sistema.")
+        msg = self.nome + ": Eu sou o {self.nome}! O bot mais insano desse sistema."
+        return msg
  
     def mostra_comandos(self):
         return self.comandos
 
     def executa_comando(self,cmd):
-        pass
+        try:
+            return self.comandos[cmd]
+        except:
+            print("Você perdeu pontos por isso...")
 
     def boas_vindas(self):
-        print(f"{self.__nome}: Olá jogadô, eu sou seu novo parceiro de equipe!")
+        msg = self.nome + ": Olá jogadô, eu sou seu novo parceiro de equipe!"
+        return msg
 
     def despedida(self):
-        print(f"{self.__nome}: Até a próxima partida meu parceiro!")
+        msg = self.nome + ": Até a próxima partida meu parceiro!"
+        return msg
