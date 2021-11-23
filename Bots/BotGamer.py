@@ -30,7 +30,7 @@ class BotGamer():
         self.__comandos = novo_comandos
 
     def apresentacao(self):
-        print("Bot Gamer: Eu sou o Bot Gamer! O bot mais insano desse sistema.")
+        print(f"{self.__nome}: Eu sou o {self.__nome}! O bot mais insano desse sistema.")
  
     def mostra_comandos(self):
         return self.comandos
@@ -39,7 +39,7 @@ class BotGamer():
         pass
 
     def boas_vindas(self):
-        print("Bot Gamer: Olá jogadô, eu sou seu novo parceiro de equipe!")
+        print(f"{self.__nome}: Olá jogadô, eu sou seu novo parceiro de equipe!")
 
     def despedida(self):
-        pass
+        print(f"{self.__nome}: Até a próxima partida meu parceiro!")
