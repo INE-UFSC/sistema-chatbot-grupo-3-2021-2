@@ -4,8 +4,9 @@ class BotMarombeiro(Bot):
     def __init__(self, nome: str):
         self.__nome = nome
         self.__comandos = {
+            "Eai frango": "Frango é tu rapaz, tem nem 40 de braço, ta doido!?!",
             "Me passa um treino?": "3x10 supino\n3x10 barra fixa\n3x10 rosca direta\n3x10 tríceps testa\n(perna não precisa)",
-            "Conselho": "Quer ficar grande? Tem que comer e treinar todo dia!", 
+            "Conselho": "Quer ficar grande? Tem que comer e treinar todo dia!"
         }
 
     @property
