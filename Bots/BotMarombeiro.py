@@ -17,16 +17,16 @@ class BotMarombeiro(Bot):
         self.__nome = nome
 
     def apresentacao(self):
-        pass
+        return "Treino e dieta eu não furo, tá ligado?"
  
     def mostra_comandos(self):
         return self.__comandos
     
     def executa_comando(self,cmd):
-        pass
+        return self.__comandos[cmd]
 
     def boas_vindas(self):
-        pass
+        return "HORA DO SHOW P****!"
 
     def despedida(self):
-        pass
+        return "Valeu mermão, até a próxima."
