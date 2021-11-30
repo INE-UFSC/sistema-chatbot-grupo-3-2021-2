@@ -2,18 +2,15 @@ from Bots.Bot import Bot
 
 class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
-        def verificacao(lista):
-            for i in lista:
-                if isinstance(i,Bot):
-                    ehBot = True
-                else:
-                    ehBot = False
-                    break
-
-            return ehBot
+        for i in lista_bots:
+            if isinstance(i,Bot):
+                ehBot = True
+            else:
+                ehBot = False
+                break
 
         self.__empresa = nomeEmpresa
-        if verificacao(lista_bots):
+        if ehBot:
             self.__lista_bots = lista_bots
             self.__bot = None
         else:
@@ -34,7 +31,7 @@ class SistemaChatBot:
             print('Programa encerrado!')
             return True
         else:
-            while entrada < 0 or entrada >= len(self.__lista_bots) :
+            while entrada < 0 or entrada > len(self.__lista_bots) :
                 print('Valor inválido!')
                 entrada = int(input('Digite o número do chat bot desejado: '))
 
@@ -53,7 +50,7 @@ class SistemaChatBot:
         if entrada == -1:
             return True
 
-        while entrada < 0 or entrada >= len(self.__bot.mostra_comandos()):
+        while entrada < -1 or entrada >= len(self.__bot.mostra_comandos()):
             print('Valor inválido!')
             entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
 
@@ -71,7 +68,9 @@ class SistemaChatBot:
         ##mostra o menu ao usuário
         self.mostra_menu()
         ##escolha do bot
-        self.escolhe_bot()
+        check = self.escolhe_bot()
+        if check:
+            return print("Tchau!")
         ##mostra mensagens de boas-vindas do bot escolhido
         print(self.__bot.boas_vindas())
         ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída

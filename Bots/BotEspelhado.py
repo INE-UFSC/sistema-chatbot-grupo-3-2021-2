@@ -31,7 +31,7 @@ class BotEspelhado(Bot):
             print("...rezaf ogisnoc oãn ue ossI")
 
     def boas_vindas(self):
-        print("Bot Espelhado: '...rednetne em agisnoc euq orepse ,uehlocse em êcoV'")
+        return "Bot Espelhado: '...rednetne em agisnoc euq orepse ,uehlocse em êcoV'"
 
     def despedida(self):
-        print("Bot Espelhado: '...amixórp a éta ,êcov moc rasrevnoc rezarp mu ioF'")
+        return "Bot Espelhado: '...amixórp a éta ,êcov moc rasrevnoc rezarp mu ioF'"
