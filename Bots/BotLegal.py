@@ -3,14 +3,16 @@ from Bots.Bot import Bot
 class BotLegal(Bot):
     def __init__(self, nome):
         self.__nome = nome
+        self.__comandos = {}
 
     @property
     def nome(self):
         return self.__nome
 
     @nome.setter
-    def nome(nome):
+    def nome(self, nome):
         self.__nome= nome
+
 
     def apresentacao(self):
         return "Olá! Eu sou o Bot Legal, podemos ser amigos?"
