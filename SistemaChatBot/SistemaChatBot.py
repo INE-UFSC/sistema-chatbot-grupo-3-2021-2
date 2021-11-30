@@ -17,10 +17,10 @@ class SistemaChatBot:
             self.__lista_bots = lista_bots
             self.__bot = None
         else:
-            raise print('Error! Nem todos os elementos são bots!')
+            raise print('Erro! Nem todos os elementos são bots!')
     
     def boas_vindas(self):
-        print('Sejam bem vindos a imersão de bots!')
+        print(f'Sejam bem vindos à imersão de bots da {self.__empresa}!')
 
     def mostra_menu(self):
         print('Os chat bots disponíveis no momento são:')
@@ -40,11 +40,11 @@ class SistemaChatBot:
 
             self.__bot = self.__lista_bots[entrada]
             return False
+
     def mostra_comandos_bot(self):
         bot_c = self.__bot.mostra_comandos()
         for i in len(bot_c.keys()):
             print(f'{i} - {bot_c.keys()[i]}')
-
 
     def le_envia_comando(self):
         entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
@@ -56,7 +56,7 @@ class SistemaChatBot:
             entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
 
 
-        print(f'{self.__bot.name}diz : {self.__bot.mostra_comandos()[self.__bot.mostra_comandos().keys()[entrada]]}')
+        print(f'{self.__bot.name} diz: {self.__bot.mostra_comandos()[self.__bot.mostra_comandos().keys()[entrada]]}')
         return False
 
     def inicio(self):
