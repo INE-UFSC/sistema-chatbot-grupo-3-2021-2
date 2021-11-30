@@ -31,7 +31,7 @@ class BotGamer(Bot):
         self.__comandos = novo_comandos
 
     def apresentacao(self):
-        msg = f": Eu sou o {self.nome}! O bot mais insano desse sistema."
+        msg = f"{self.nome}: Eu sou o {self.nome}! O bot mais insano desse sistema."
         return msg
  
     def mostra_comandos(self):
