@@ -11,7 +11,7 @@ from Bots.BotManezinho import BotManezinho
 from Bots.BotMinerin import BotMinerin
 
 ###construa a lista de bots disponíveis aqui
-lista_bots = [BotMarombeiro("Bambam"), BotGamer("Ninja"), BotEspelhado("oãoJ"), BotMinerin("José"), BotManezinho("Moquirido"), BotZangado("Tisca"), BotTriste("Sadboy"), BotMusical("Thiaguinho"), BotJose("José")]
+lista_bots = [BotMarombeiro("Bambam"), BotGamer("Ninja"), BotEspelhado("oãoJ"), BotMinerin("Renato"), BotManezinho("Moquirido"), BotZangado("Tisca"), BotTriste("Sadboy"), BotMusical("Thiaguinho"), BotJose("José")]
 
 sys = scb.SistemaChatBot("4FunBots",lista_bots)
 sys.inicio()
