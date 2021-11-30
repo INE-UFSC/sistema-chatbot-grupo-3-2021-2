@@ -5,19 +5,19 @@ class SistemaChatBot:
         def verificacao(lista):
             for i in lista:
                 if isinstance(i,Bot):
-                    x = True
+                    ehBot = True
                 else:
-                    x = False
+                    ehBot = False
                     break
 
-            return x
+            return ehBot
 
         self.__empresa = nomeEmpresa
         if verificacao(lista_bots):
             self.__lista_bots = lista_bots
             self.__bot = None
         else:
-            print('Error! Nem todos os elementos são bots!')
+            raise print('Error! Nem todos os elementos são bots!')
     
     def boas_vindas(self):
         print('Sejam bem vindos a imersão de bots!')
