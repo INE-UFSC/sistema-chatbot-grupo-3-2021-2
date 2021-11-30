@@ -34,29 +34,35 @@ class SistemaChatBot:
             print('Programa encerrado!')
             return True
         else:
-            while entrada <= len(self.__lista_bots) or entrada >= len(self.__lista_bots) :
+            while entrada < 0 or entrada >= len(self.__lista_bots) :
                 print('Valor inválido!')
                 entrada = int(input('Digite o número do chat bot desejado: '))
 
-            self.__bot = self.__lista_bots[entrada]
+            self.__bot = self.__lista_bots[entrada-1]
             return False
 
     def mostra_comandos_bot(self):
         bot_c = self.__bot.mostra_comandos()
-        for i in len(bot_c.keys()):
-            print(f'{i} - {bot_c.keys()[i]}')
+        index = 0
+        for i in bot_c:
+            print(f'{index} - {i}')
+            index += 1
 
     def le_envia_comando(self):
         entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
         if entrada == -1:
             return True
 
-        while entrada <= len(self.__bot.mostra_comandos()) or entrada >= len(self.__bot.mostra_comandos()):
+        while entrada < 0 or entrada >= len(self.__bot.mostra_comandos()):
             print('Valor inválido!')
             entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
 
+        list_temp = []
+        dic = self.__bot.mostra_comandos()
+        for el in dic:
+            list_temp.append(dic[el])
 
-        print(f'{self.__bot.name} diz: {self.__bot.mostra_comandos()[self.__bot.mostra_comandos().keys()[entrada]]}')
+        print(f'{self.__bot.nome} diz: {list_temp[entrada]}')
         return False
 
     def inicio(self):
