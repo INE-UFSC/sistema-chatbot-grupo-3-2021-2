@@ -18,11 +18,13 @@ class SistemaChatBot:
     
     def boas_vindas(self):
         print(f'Sejam bem vindos à imersão de bots da {self.__empresa}!')
+        print()
 
     def mostra_menu(self):
         print('Os chat bots disponíveis no momento são:')
         for i in range(len(self.__lista_bots)):
             print(f'{i+1} - Bot: {self.__lista_bots[i].nome} - Mensagem de apresentação: {self.__lista_bots[i].apresentacao()}')
+        print()
 
     def escolhe_bot(self):
 
@@ -44,6 +46,7 @@ class SistemaChatBot:
         for i in bot_c:
             print(f'{index} - {i}')
             index += 1
+        print()
 
     def le_envia_comando(self):
         entrada = int(input('Digite o comando desejado:(-1 para encerrar o programa) '))
@@ -60,6 +63,7 @@ class SistemaChatBot:
             list_temp.append(dic[el])
 
         print(f'{self.__bot.nome} diz: {list_temp[entrada]}')
+        print()
         return False
 
     def inicio(self):
