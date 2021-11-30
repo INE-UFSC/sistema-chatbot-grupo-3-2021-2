@@ -3,8 +3,11 @@ from Bots.Bot import Bot
 class BotZangado(Bot):
     def __init__(self, nome):
         super().__init__(nome)
-        self.__comandos = {"1": "Olá, tudo bem ? ",
-                           "2": "Como você está ?", "3": "Quero um conselho", "4": "Adeus"}
+        self.__comandos = {"Olá, tudo bem ? ": "E o que tem de bom?!",
+                           "Como você está ?": "Não interessa!", 
+                           "Quero um conselho": "Não tenho filho deste tamanho!", 
+                           "Adeus": ""
+                           }
 
     @property
     def comandos(self):
@@ -14,19 +17,13 @@ class BotZangado(Bot):
         return f'GRRRRRR Meu nome é {self.nome} e não me incomode!'
 
     def executa_comando(self, cmd):
-        if cmd == '1':
-            return f' {self.nome} diz: E o que tem de bom?!'
-        elif cmd == '2':
-            return f' {self.nome} diz: Não interessa!'
-        elif cmd == '3':
-            return f' {self.nome} diz:Não tenho filho deste tamanho!'
-        elif cmd == '4':
-            return self.despedida()
-        else:
-            return f'Comando não encontrado'
+        try:
+            return self.__comandos[cmd]
+        except:
+            print("NÃO SEI!")
 
     def boas_vindas(self):
-        return f' {self.nome} diz: Não acredito que você me escolheu!'
+        return 'Não acredito que você me escolheu!'
 
     def despedida(self):
-        return f' {self.nome} diz: Finalmente, até nunca mais! '
+        return 'Finalmente, até nunca mais! '

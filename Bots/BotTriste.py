@@ -4,10 +4,10 @@ class BotTriste(Bot):
     def __init__(self,nome):
         self.__nome = nome
         self.__comandos = {
-            '1': 'Oláa!!',
-            '2': 'Como você está? :)',
-            '3': 'Pode me ajudar?',
-            '4': 'Tchau'}
+            'Oláa!!': 'Oi...',
+            'Como você está? :)': 'Queria sentir algo para te responder...',
+            'Pode me ajudar?': 'Até posso, mas acho que não ajudaria muito de qualquer jeito...',
+            'Tchau': 'Tchau...'}
 
     @property
     def nome(self):
@@ -25,17 +25,10 @@ class BotTriste(Bot):
         return f'Meu nome, infelizmente, é {self.__nome}...'
     
     def executa_comando(self,cmd):
-        print('     --> Eu te respondo: ', end='')
-        if cmd == '1':
-            print('Oi...')
-        elif cmd == '2':
-            print('Queria sentir algo para te responder...')
-        elif cmd == '3':
-            print('Até posso, mas acho que não ajudaria muito de qualquer jeito...')
-        elif cmd == '4':
-            print('Tchau...')
-        else:
-            print('Você não digitou um comando válido e estou muito triste :(')
+        try:
+            return self.__comando[cmd]
+        except:
+            print("Não sei...")
             
 
     def boas_vindas(self):
