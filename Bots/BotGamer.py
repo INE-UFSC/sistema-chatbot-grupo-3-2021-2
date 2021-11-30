@@ -1,7 +1,8 @@
 # from Bots.Bot import Bot
 from datetime import datetime
+from Bots.Bot import Bot
 
-class BotGamer():
+class BotGamer(Bot):
     def __init__(self,nome):
         self.__nome = nome
         self.__comandos = {
@@ -30,7 +31,7 @@ class BotGamer():
         self.__comandos = novo_comandos
 
     def apresentacao(self):
-        msg = self.nome + ": Eu sou o {self.nome}! O bot mais insano desse sistema."
+        msg = f": Eu sou o {self.nome}! O bot mais insano desse sistema."
         return msg
  
     def mostra_comandos(self):

@@ -18,13 +18,14 @@ class BotEspelhado(Bot):
         self.__nome = nome
 
     def apresentacao(self):
-        print("Bot Espelhado: '...oditrevni é olaf euq odut ,odahlepsE toB o ", self.__nome," uos ue ,álO'")
+        msg = "...oditrevni é olaf euq odut ,odahlepsE toB o " + self.__nome + " uos ue ,álO"
+        return msg
  
     def mostra_comandos(self):
         return self.__comandos
     
     def executa_comando(self,cmd):
-         try:
+        try:
             return self.__comandos[cmd]
         except:
             print("...rezaf ogisnoc oãn ue ossI")

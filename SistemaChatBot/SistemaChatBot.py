@@ -4,9 +4,8 @@ class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
         def verificacao(lista):
             for i in lista:
-                if type(i).__name__ == 'Bot':
+                if isinstance(i,Bot):
                     x = True
-
                 else:
                     x = False
                     break
@@ -26,7 +25,7 @@ class SistemaChatBot:
     def mostra_menu(self):
         print('Os chat bots disponíveis no momento são:')
         for i in range(len(self.__lista_bots)):
-            print(f'{i} - Bot: {i.nome} - Mensagem de apresentação: {i.apresentacao}')
+            print(f'{i+1} - Bot: {self.__lista_bots[i].nome} - Mensagem de apresentação: {self.__lista_bots[i].apresentacao()}')
 
     def escolhe_bot(self):
 
