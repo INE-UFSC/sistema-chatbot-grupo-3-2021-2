@@ -17,8 +17,7 @@ class BotTriste(Bot):
     def nome(self, nome):
         self.nome = nome
         
-    @property
-    def comandos(self):
+    def mostra_comandos(self):
         return self.__comandos
 
     def apresentacao(self):

@@ -9,8 +9,8 @@ class BotZangado(Bot):
                            "Adeus": ""
                            }
 
-    @property
-    def comandos(self):
+    
+    def mostra_comandos(self):
         return self.__comandos
 
     def apresentacao(self):
